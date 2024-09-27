@@ -1,0 +1,26 @@
+from graphviz import Digraph
+
+# Crear un nuevo objeto de gráfico
+dot = Digraph()
+
+# Añadir nodos
+dot.node('A', 'Cambio Climático')
+dot.node('B', 'Efectos')
+dot.node('C1', 'Aumento del Nivel del Mar')
+dot.node('C2', 'Olas de Calor')
+dot.node('C3', 'Aumento de Tormentas')
+dot.node('C4', 'Sequías')
+dot.node('C5', 'Especies en Extinción')
+dot.node('C6', 'Aumento de Alergias')
+dot.node('C7', 'Destrucción de Cosechas')
+dot.node('C8', 'Acidificación de Océanos')
+dot.node('C9', 'Mayor Incidencia de Enfermedades')
+dot.node('C10', 'Destrucción de Ecosistemas')
+
+# Conectar nodos
+dot.edges(['AB', 'AC1', 'AC2', 'AC3', 'AC4', 'AC5', 'AC6', 'AC7', 'AC8', 'AC9', 'AC10'])
+
+# Renderizar y mostrar el mapa
+dot.render('mapa_conceptual', format='png', cleanup=True)
+dot.view()
+
